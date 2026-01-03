@@ -3,79 +3,191 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>QKhalil University – Excellence in Education, Rooted in Kyrgyzstan</title>
+    <meta name="description" content="QKhalil University – Excellence in Education, Rooted in Kyrgyzstan. Offering English-taught programs in Engineering, Business, and Social Sciences." />
+    <title>QKhalil University | Bishkek, Kyrgyz Republic</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        :root {
+            --primary: #003366;
+            --secondary: #0066cc;
+            --light: #e6f2ff;
+            --dark: #333;
+            --gray: #666;
+            --white: #fff;
+        }
+        * {
             margin: 0;
             padding: 0;
-            color: #333;
-            background-color: #f9f9f9;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: #f8f9fa;
         }
         header {
-            background: linear-gradient(135deg, #003366, #0066cc);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 2rem 5%;
             text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
         }
-        header h1 {
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: var(--white);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
         }
         header p {
             font-size: 1.1rem;
             opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        nav {
+            background: var(--dark);
+            padding: 0.8rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            font-weight: 500;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--light);
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem 5%;
+            padding: 3rem 5%;
         }
         section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
         }
         h2 {
-            color: #004c99;
-            border-bottom: 2px solid #eee;
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            position: relative;
             padding-bottom: 0.5rem;
-            margin-top: 2rem;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
         }
         p, ul {
             margin-bottom: 1rem;
+            color: var(--gray);
         }
         .highlight {
-            background-color: #e6f2ff;
+            background-color: var(--light);
             padding: 1.5rem;
-            border-left: 4px solid #0066cc;
+            border-left: 4px solid var(--secondary);
             margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .programs li {
+            margin-bottom: 0.8rem;
+        }
+        .programs strong {
+            color: var(--primary);
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
         }
         footer {
             text-align: center;
-            padding: 1.5rem;
-            background-color: #003366;
+            padding: 2.5rem 1rem;
+            background-color: var(--primary);
             color: white;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
+        footer a {
+            color: var(--light);
             text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
+    <div class="logo">QK</div>
     <h1>QKhalil University</h1>
     <p>Innovating Education in the Heart of Central Asia</p>
 </header>
 
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#campus">Campus Life</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+    </ul>
+</nav>
+
 <div class="container">
 
-    <section>
+    <section id="about">
         <h2>About Us</h2>
         <p>Located in the scenic city of Bishkek, Kyrgyzstan, QKhalil University is a forward-thinking institution dedicated to academic excellence, research innovation, and global citizenship. Founded with a vision to empower future leaders through transformative education, we blend international standards with deep respect for Central Asian heritage and values.</p>
         
@@ -84,35 +196,46 @@
         </div>
     </section>
 
-    <section>
+    <section id="programs">
         <h2>Academic Programs</h2>
         <p>We offer undergraduate and graduate programs across diverse fields, taught by internationally trained faculty and designed to meet global academic benchmarks.</p>
-        <ul>
+        <ul class="programs">
             <li><strong>Faculty of Engineering & Technology</strong> – AI, Renewable Energy, Civil Infrastructure</li>
             <li><strong>School of Business & Economics</strong> – International Business, Finance, Entrepreneurship</li>
-            <li><<strong>Faculty of Humanities & Social Sciences</strong> – International Relations, Psychology, Digital Media</li>
+            <li><strong>Faculty of Humanities & Social Sciences</strong> – International Relations, Psychology, Digital Media</li>
             <li><strong>Department of Environmental Studies</strong> – Sustainable Development, Alpine Ecology (leveraging Kyrgyzstan’s unique landscapes)</li>
         </ul>
         <p>All programs emphasize practical learning, internships, and cross-cultural collaboration.</p>
     </section>
 
-    <section>
+    <section id="why-us">
         <h2>Why Study at QKhalil?</h2>
-        <ul>
-            <li>✅ Small class sizes with personalized mentorship</li>
-            <li>🌍 Diverse student body from over 20 countries</li>
-            <li>🏔️ Unique access to field research in mountains, lakes, and Silk Road heritage sites</li>
-            <li>💡 Strong industry partnerships in tech, energy, and sustainable tourism</li>
-            <li>🎓 English-taught curriculum with optional Kyrgyz/Russian language support</li>
-        </ul>
+        <div class="why-grid">
+            <div class="card">
+                <h3>Small Class Sizes</h3>
+                <p>Personalized mentorship ensures every student thrives academically and personally.</p>
+            </div>
+            <div class="card">
+                <h3>Global Community</h3>
+                <p>Students from over 20 countries create a rich, multicultural environment.</p>
+            </div>
+            <div class="card">
+                <h3>Natural Advantage</h3>
+                <p>Field research in mountains, lakes, and Silk Road sites enhances real-world learning.</p>
+            </div>
+            <div class="card">
+                <h3>Career Readiness</h3>
+                <p>Strong industry partnerships open doors in tech, energy, and sustainable development.</p>
+            </div>
+        </div>
     </section>
 
-    <section>
+    <section id="campus">
         <h2>Campus Life</h2>
         <p>Our modern campus features smart classrooms, a digital library, innovation labs, and vibrant student clubs. Nestled near the Ala-Too Mountains, students enjoy hiking, skiing, and cultural festivals year-round. Bishkek—a safe, affordable, and cosmopolitan capital—offers rich history, cafes, and a dynamic arts scene.</p>
     </section>
 
-    <section>
+    <section id="admissions">
         <h2>Admissions</h2>
         <p>We welcome motivated students from around the world. Applications are accepted year-round for Fall and Spring intakes.</p>
         <p><a href="mailto:admissions@qkhalil.edu.kg">Contact Admissions</a> | <a href="#">View Program Requirements</a></p>
